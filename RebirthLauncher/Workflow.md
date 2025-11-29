@@ -61,16 +61,21 @@ emphasizes:
 ---
 
 ## Development Practices
+- **MVVM Architecture**: Strict adherence to MVVM principles for separation
+  of concerns. Use .Net 8.0 and C# 12 features where appropriate. 
 - **Error Handling**: Incorporate structured error reporting and
   user‑friendly feedback.
+- **Nullability**: Adhere to strict nullability checks and practices
+  throughout the codebase. No need to apply #nullable directives as the default
+  project setting is enabled.
 - **Logging**: Log all exceptions. Any exceptions not explicitly handled
-  should be rethrown after logging.
+  should be rethrown after logging. Verbosity will be described per step in Implementation.md.
 - **Validation Discipline**: Ensure initialization steps, settings
   persistence, and server handling are validated consistently.
 - **Testing**: Unit testing must be performed for each unit‑testable class,
   ViewModel, and service before moving on to the next component.
 - **Documentation**: Keep charter static; update workflow and file listings
-  dynamically as project evolves.
+  dynamically as project evolves. Use XMLDOC comments throughout the codebase.
 
 ---
 
