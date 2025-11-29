@@ -2,7 +2,7 @@
 
 This document provides the current directory and file structure for the
 launcher project. It is updated dynamically as files are added, removed,
-or modified.
+or modified. If a file is not listed here, it does not exist in the project yet.
 
 ---
 
@@ -42,16 +42,23 @@ or modified.
 ---
 
 ## URL Construction Rule
-To access the raw GitHub URL for any file listed above, use the following
-format:
 
-https://raw.githubusercontent.com/klbr8/MVVMLauncher/refs/heads/master/<RelativePath>
+To access the raw GitHub URL for any file listed in the directory tree, use the following format:
 
-- `<RelativePath>` = path shown in the directory tree, starting from the
-  repo root.
+https://raw.githubusercontent.com/klbr8/MVVMLauncher/refs/heads/master/RebirthLauncher/<Subfolders>/<FileName>
 
-Example:
-- File: `src/Services/Bootstrap.cs`
-- URL: `https://raw.githubusercontent.com/klbr8/MVVMLauncher/refs/heads/master/src/Services/Bootstrap.cs`
+### Guidelines
+- Always begin the relative path with `RebirthLauncher`.
+- Use forward slashes (`/`) instead of backslashes (`\`) when constructing URLs.
+- Append subfolders and the file name exactly as shown in the directory tree.
+- Do not include `src/` or any other prefixes not present in the repository structure.
 
+### Examples
+- **File:** `RebirthLauncher\Services\Bootstrap.cs`  
+  **URL:** `https://raw.githubusercontent.com/klbr8/MVVMLauncher/refs/heads/master/RebirthLauncher/Services/Bootstrap.cs`
 
+- **File:** `RebirthLauncher\Constants\LauncherConstants.cs`  
+  **URL:** `https://raw.githubusercontent.com/klbr8/MVVMLauncher/refs/heads/master/RebirthLauncher/Constants/LauncherConstants.cs`
+
+- **File:** `RebirthLauncher\Views\InitializingDialog.xaml`  
+  **URL:** `https://raw.githubusercontent.com/klbr8/MVVMLauncher/refs/heads/master/RebirthLauncher/Views/InitializingDialog.xaml`
