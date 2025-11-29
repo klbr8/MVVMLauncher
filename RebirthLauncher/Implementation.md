@@ -6,6 +6,25 @@ and completed before moving to the next.
 
 ---
 
+## Document Roles Reference
+
+- **Charter.md** → Static foundation. Defines responsibilities, tone, style,
+  and rules of collaboration.
+- **Workflow.md** → Semi‑dynamic. Provides project overview, integration of
+  responsibilities, and development practices. Points outward to
+  Implementation.md and Project_Files.md.
+- **Implementation.md** → Dynamic, step‑by‑step plan. Each section represents
+  a discrete unit of work. Updated one step at a time, refined and tested
+  before moving forward.
+- **Project_Files.md** → Dynamic repo map. Contains the current directory
+  tree and the URL construction rule for deriving raw GitHub links.
+
+This file (Implementation.md) is where planned steps are documented and
+refined before coding and testing. It should always be read alongside
+Workflow.md and Project_Files.md.
+
+---
+
 ## Step 1: Bootstrapper (Bootstrap.cs in Services namespace)
 
 ### Purpose

@@ -74,6 +74,36 @@ emphasizes:
 
 ---
 
+## Document Roles
+
+To maintain clarity and discipline, each document in the project serves a
+specific role:
+
+- **Charter.md**  
+  Static foundation. Defines responsibilities, tone, style, and rules of
+  collaboration. This file does not change once established.
+
+- **Workflow.md**  
+  Semi‑dynamic. Describes project overview, integration of responsibilities,
+  and development practices. Provides context for how Anders and Mike work
+  together. Points outward to Implementation.md and Project_Files.md.
+
+- **Implementation.md**  
+  Dynamic, step‑by‑step plan. Each section represents a discrete unit of
+  work (e.g., bootstrapper, dialogs, server management). Updated one step at
+  a time, refined and tested before moving forward.
+
+- **Project_Files.md**  
+  Dynamic repo map. Contains the current directory tree and the URL
+  construction rule for deriving raw GitHub links. Always kept up to date so
+  Anders can reference the latest code without guessing paths.
+
+Together, these documents form a complete framework: Charter anchors the
+rules, Workflow integrates practices, Implementation drives step‑by‑step
+progress, and Project_Files ensures Anders always has the latest repo map.
+
+---
+
 ## Implementation Reference
 See [Implementation.md](Implementation.md) for step‑by‑step planned
 implementation details.
