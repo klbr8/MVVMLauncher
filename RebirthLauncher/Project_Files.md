@@ -14,6 +14,9 @@ or modified. If a file is not listed here, it does not exist in the project yet.
 │  ├─📄 BooleanToVisibilityConverter.cs
 │  ├─📄 RoundEndRadiusConverter.cs
 │  └─📄 UrlToBitmapImageConverter.cs
+├─📁 Dialogs
+│  ├─📄 InitializingDialog.xaml
+│  └─📄 SplashScreen.xaml
 ├─📁 Enums
 │  └─📄 AppState.cs
 ├─📁 Models
@@ -21,23 +24,29 @@ or modified. If a file is not listed here, it does not exist in the project yet.
 │  ├─📄 DownloadProgress.cs
 │  ├─📄 FileProgress.cs
 │  ├─📄 Manifest.cs
+│  ├─📄 ReleaseVersion.cs
 │  ├─📄 Server.cs
 │  └─📄 ServerList.cs
 ├─📁 Resources
 │  └─📄 Converters.xaml
 ├─📁 Services
+│  └─📄 Bootstrap.cs
 ├─📁 Styles
 │  ├─📄 ButtonStyles.xaml
 │  └─📄 OverlayStyles.xaml
 ├─📁 Utilities
-│  └─📄 ReleaseVersion.cs
+│  └─📄 HashHelper.cs
 ├─📁 ViewModels
+│  ├─📄 InitializingDialogViewModel.cs
+│  └─📄 SplashScreenViewModel.cs
 ├─📄 App.xaml
 ├─📄 AssemblyInfo.cs
 ├─📄 Charter.md
 ├─📄 Implementation.md
 ├─📄 MainWindow.xaml
+├─📄 Project_Files.md
 └─📄 Workflow.md
+
 
 ---
 

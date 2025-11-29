@@ -1,4 +1,4 @@
-﻿namespace RebirthLauncher.Utilities
+﻿namespace RebirthLauncher.Models
 {
     /// <summary>
     /// Represents a software release version number with major, minor, build, and revision components.
