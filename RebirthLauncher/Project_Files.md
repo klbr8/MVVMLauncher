@@ -19,6 +19,8 @@ or modified. If a file is not listed here, it does not exist in the project yet.
 │  └─📄 SplashScreen.xaml
 ├─📁 Enums
 │  └─📄 AppState.cs
+├─📁 Helpers
+│  └─📄 FileHelper.cs
 ├─📁 Models
 │  ├─📄 BrowseButton.cs
 │  ├─📄 DownloadProgress.cs
@@ -46,7 +48,6 @@ or modified. If a file is not listed here, it does not exist in the project yet.
 ├─📄 MainWindow.xaml
 ├─📄 Project_Files.md
 └─📄 Workflow.md
-
 
 ---
 

@@ -4,30 +4,39 @@ using System.IO;
 
 namespace RebirthLauncher.Constants
 {
-    internal static class LauncherConstants
+    public static class LauncherConstants
     {
-        // Base folder for launcher data (local app data)
-        internal static readonly string AppDataFolder =
-            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "RebirthLauncher");
+        // Local/AppData folder name for launcher data
+        public static readonly string AppDataFolderName = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            "RebirthLauncher");
 
-        // Files (not user editable)
-        internal static readonly string SettingsFilePath = Path.Combine(AppDataFolder, "settings.xml");
-        internal static readonly string ServersFilePath = Path.Combine(AppDataFolder, "servers.xml");
-        internal static readonly string LogFilePath = Path.Combine(AppDataFolder, "launcher.log");
+        // Old launcher filename to check/delete at startup (single exact name; no wildcards)
+        public const string OldLauncherFileName = "RebirthLauncher.exe.old";
 
-        // Remote resources
-        // Replace these with your actual URLs; keep them internal and stable.
-        internal static readonly string VersionUrl = "https://example.com/rebirthlauncher/version.txt";
-        internal static readonly string DefaultServerManifestUrl = "https://example.com/rebirthlauncher/default_manifest.xml";
+        // Log file name (appended to when /log is present)
+        public const string LogFileName = "rebirth_launcher.log";
 
-        // Network retry policy (small, conservative defaults)
-        internal static readonly int NetworkRetryCount = 2; // total attempts
-        internal static readonly int NetworkRetryDelayMs = 500;
+        // Version file and update zip names (used in later sub-steps)
+        private const string _versionFileName = "version.txt";
+        private const string _updateZipName = "RebirthLauncher_Update.zip";
 
-        // Logging rotation threshold (bytes)
-        internal static readonly long LogMaxBytes = 5_000_000; // 5 MB
+        // Remote base components (private). Public properties expose absolute URLs.
+        private const string _remoteBase = "https://example.com/rebirth"; // placeholder; can be overridden later
 
-        // Other small defaults
-        internal static readonly int DefaultHttpTimeoutSeconds = 100; // if you later choose to set HttpClient.Timeout
+        /// <summary>
+        /// Absolute URL to version.txt (constructed from private members).
+        /// </summary>
+        public static string VersionUrl => $"{_remoteBase.TrimEnd('/')}/{_versionFileName}";
+
+        /// <summary>
+        /// Absolute URL to the update zip (constructed from private members).
+        /// </summary>
+        public static string UpdateZipUrl => $"{_remoteBase.TrimEnd('/')}/{_updateZipName}";
+
+        // Exit codes
+        public const int ExitCodeSuccess = 0;
+        public const int ExitCodeUninstall = 2;
+        public const int ExitCodeBootstrapFailure = 1;
     }
 }
